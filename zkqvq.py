@@ -1,18 +1,13 @@
 import time
 
-def focus_timer(minutes):
-    """Starts a focus timer for the specified number of minutes."""
-
+def timer(minutes):
     seconds = minutes * 60
-
     while seconds > 0:
-        minutes, sec = divmod(seconds, 60)
-        timer = '{:02d}:{:02d}'.format(minutes, sec)
+        mins, secs = divmod(seconds, 60)
+        timer = '{:02d}:{:02d}'.format(mins, secs)
         print(timer + " remaining")
-
         time.sleep(1)
-
         seconds -= 1
+    print("Time's up! Good job on your focused work.")
 
-    print("Time is up! Good job on your focused work.")
-focus_timer()
+timer(25)
