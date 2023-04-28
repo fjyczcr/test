@@ -15,3 +15,4 @@ def focus_timer(minutes):
         seconds -= 1
 
     print("Time is up! Good job on your focused work.")
+focus_timer()
